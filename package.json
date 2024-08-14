@@ -1,13 +1,21 @@
 {
-  "name": "mono-repo",
+  "name": "root",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
   "workspaces": [
     "packages/package-a",
     "packages/package-b"
   ],
+  "scripts": {
+    "changeset": "changeset",
+    "release": "changeset version",
+    "publish": "changeset publish"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.7"
+  },
+  "dependencies": {
+    "@types/node": "^22.2.0",
+    "typescript": "^5.5.4"
   }
 }
